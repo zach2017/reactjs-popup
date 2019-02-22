@@ -45,8 +45,8 @@
     "parcel-bundler": "^1.7.1",
     "prettier": "^1.16.3",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-testing-library": "^5.4.4",
     "story-router": "^1.0.1",
     "why-did-you-update": "^0.1.1"
