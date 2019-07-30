@@ -8,8 +8,8 @@ redirects:
   - "use case - Tooltip"
 ---
 
-import NestedToolTip from '../../../src/examples/NestedToolTip.js'
-import BoundedTooltip from '../../../src/examples/BoundedTooltip.js'
+import NestedToolTip from '../src/examples/NestedToolTip.js'
+import BoundedTooltip from '../src/examples/BoundedTooltip.js'
 
 ## Nested React Tooltip
 
@@ -79,9 +79,7 @@ const BoundedTooltip = () => (
 
 ## Play with React Tooltip
 
-```jsx
-/* react-live */
-
+```jsx live=true
 const Tooltip = () => (
   <Popup
     trigger={open => (

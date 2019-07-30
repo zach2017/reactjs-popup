@@ -1,9 +1,11 @@
 import React from 'react';
 import {LiveProvider, LiveEditor, LiveError, LivePreview} from 'react-live';
 import {Link, graphql} from 'gatsby';
-import {MDXProvider} from '@mdx-js/tag';
+import {MDXProvider} from '@mdx-js/react';
+
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Layout from '../components/Layout';
+import mdxComponents from "../components/mdx";
 import Sidebar from '../components/Sidebar';
 
 import SEO from '../components/SEO';
@@ -42,7 +44,7 @@ export default ({data: {mdx}, pageContext: {next, prev}}) => (
           EDIT
         </a>
 
-        <MDXProvider components={{code: MyCodeComponent}}>
+        <MDXProvider components={mdxComponents}>
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
         </MDXProvider>
         <div className="margin-top--xl margin-bottom--lg">

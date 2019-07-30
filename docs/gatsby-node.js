@@ -51,10 +51,8 @@ exports.createPages = ({graphql, actions}) => {
 
           createPage({
             path: getUrlFromPath(node.frontmatter.path),
-            component: componentWithMDXScope(
-              path.resolve('./src/template/Template.js'),
-              node.code.scope,
-            ),
+            component: path.resolve('./src/template/Template.js'),
+
             context: {
               id: node.id,
               name: node.frontmatter.path,
@@ -73,10 +71,7 @@ exports.createPages = ({graphql, actions}) => {
             node.frontmatter.redirects.forEach(fromPath => {
               createPage({
                 path: getUrlFromPath(fromPath),
-                component: componentWithMDXScope(
-                  path.resolve('./src/template/Template.js'),
-                  node.code.scope,
-                ),
+                component: path.resolve('./src/template/Template.js'),
                 context: {
                   id: node.id,
                   name: node.frontmatter.path,
